@@ -30,6 +30,10 @@ function Shoppingcart() {
     catch(err) {console.log(err)}
   }
 
+  const clearStorage = () => {
+    window.location.reload(false)
+  }
+
   return (
     <div className="cart-container">
       
@@ -89,6 +93,10 @@ function Shoppingcart() {
 
             <div className='checkout-button'>
               <input className="cart-button" onClick={submitForm} type='button' value='Checkout'></input>
+           </div>
+
+           <div className='checkout-button'>
+              <input className="cart-button" onClick={clearStorage} type='button' value='Clear Cart'></input>
            </div>
             
            <div className='Go-Back-button'>
